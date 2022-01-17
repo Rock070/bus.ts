@@ -24,7 +24,7 @@ const xhr = ({
     params,
   }
 
-  axios(options)
+  // axios(options)
     .then(res => {})
     .catch(err => { })
 
