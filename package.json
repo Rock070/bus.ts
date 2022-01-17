@@ -7,9 +7,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^0.24.0",
+    "jssha": "^3.2.0",
+    "lint-staged": "^12.1.7",
     "pug": "^3.0.2",
     "twind": "^0.16.16",
     "vue": "^3.2.25"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",
