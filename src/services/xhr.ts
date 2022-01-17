@@ -1,35 +1,33 @@
 import axios from 'axios'
+import { getAuthorizationHeader } from './helper'
 
-const xhr = ({
-  method = 'GET',
-  data = null,
-  params = null,
-  url = '/',
-}) => {
-  const baseUrl = 'https://jsonplaceholder.typicode.com/'
-  const targetUrl = baseUrl + url
-  // console.log(url, data, params, )
-  // axios({
-  //   method: 'post',
-  //   url: '/user/12345',
-  //   data: {
-  //     firstName: 'Fred',
-  //     lastName: 'Flintstone'
-  //   }
-  // });
-  const options = {
-    method,
-    targetUrl,
-    data,
-    params,
-  }
-
-  // axios(options)
-    .then(res => {})
-    .catch(err => { })
-
-  return 
+interface Ioptions {
+  method: string
+  url: string
+  data?: string | null
+  params?: string | null
 }
 
+const xhr = async (options: Ioptions) => {
+  const {
+    method = 'GET',
+    url = '/',
+    data = null,
+    params = null,
+  } = { ...options }
+
+  const BASE_URL = 'https://ptx.transportdata.tw/MOTC/'
+  const targetUrl = BASE_URL + options.url
+
+  return await axios({
+    method,
+    url: targetUrl,
+    data, 
+    params,
+    // headers: getAuthorizationHeader(),
+  })
+    .then(res => res.data)
+    .catch(err => Promise.reject(err))
+}
 
 export default xhr

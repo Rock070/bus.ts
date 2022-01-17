@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@vitejs/plugin-vue': ^2.0.0
   axios: ^0.24.0
+  jssha: ^3.2.0
   lint-staged: ^12.1.7
   pug: ^3.0.2
   twind: ^0.16.16
@@ -13,6 +14,7 @@ specifiers:
 
 dependencies:
   axios: 0.24.0
+  jssha: 3.2.0
   lint-staged: 12.1.7
   pug: 3.0.2
   twind: 0.16.16_typescript@4.5.4
@@ -747,6 +749,10 @@ packages:
   /jsonc-parser/3.0.0:
     resolution: {integrity: sha512-fQzRfAbIBnR0IQvftw9FJveWiHp72Fg20giDrHz6TdfB12UH/uue0D3hm57UB5KgAVuniLMCaS8P1IMj9NR7cA==}
     dev: true
+
+  /jssha/3.2.0:
+    resolution: {integrity: sha512-QuruyBENDWdN4tZwJbQq7/eAK85FqrI4oDbXjy5IBhYD+2pTJyBUWZe8ctWaCkrV0gy6AaelgOZZBMeswEa/6Q==}
+    dev: false
 
   /jstransformer/1.0.0:
     resolution: {integrity: sha1-7Yvwkh4vPx7U1cGkT2hwntJHIsM=}
